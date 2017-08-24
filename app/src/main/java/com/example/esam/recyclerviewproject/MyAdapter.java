@@ -67,12 +67,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             long minutes = (diff / (60 * 1000)) - (days * 24 * 60) - (hours * 60);
             //long seconds = (diff / (1000)) - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);
 
-            if (days == 0) {
+            if (days == 0 && hours == 0) {
+                holder.textViewDate.setText("| منذ " + minutes + " دقيقة ");
+            } else if (days == 0) {
                 holder.textViewDate.setText("| منذ " + hours + " ساعة," + minutes + " دقيقة");
-            } else if (days == 0 && hours == 0) {
-                holder.textViewDate.setText("| منذ " + minutes + " دقيقة " );
             } else {
-                holder.textViewDate.setText("| منذ " + days + " يوم," + hours + " ساعة," + minutes + "دقيقة" );
+                holder.textViewDate.setText("| منذ " + days + " يوم," + hours + " ساعة," + minutes + "دقيقة");
             }
 
 
