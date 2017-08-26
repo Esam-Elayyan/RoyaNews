@@ -79,7 +79,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        holder.textViewHead.setTextColor(Color.parseColor("#00aaff"));
 
         Picasso.with(context)
                 .load(listItem.getImageUrl())
